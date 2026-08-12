@@ -1,0 +1,39 @@
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .site-logo {
+    color: #235d3b;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  
+  .nav-links a {
+    color: #4b5563;
+    text-decoration: none;
+  }
+  
+  .nav-links a:hover {
+    color: #235d3b;
+  }
+  
+  .nav-links a.active {
+    color: #235d3b;
+    font-weight: 600;
+  }
