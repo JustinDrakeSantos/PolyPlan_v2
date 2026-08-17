@@ -29,6 +29,22 @@ function Layout() {
                 Planner
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to="/flashcards"
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                Flashcards
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/study"
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                Study
+              </NavLink>
+            </li>
           </ul>
         </nav>
       </header>

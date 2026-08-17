@@ -1,0 +1,237 @@
+.study-page {
+  width: min(100% - 2rem, 1120px);
+  margin: 0 auto;
+  padding: 2.5rem 0;
+  color: var(--text-heading, #08060d);
+  text-align: left;
+}
+
+/* Page heading */
+
+.study-page__header {
+  margin-bottom: 1.5rem;
+}
+
+.study-page__header h1 {
+  margin: 0 0 0.25rem;
+  color: var(--text-heading, #08060d);
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  line-height: 1.1;
+}
+
+.study-page__header p {
+  margin: 0;
+  color: var(--text, #6b6375);
+}
+
+/* Session setup */
+
+.study-setup {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border: 1px solid var(--border, #e5e4e7);
+  border-radius: 0.75rem;
+  background-color: var(--background, #ffffff);
+}
+
+.study-setup h2 {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.study-setup > label,
+.study-session > label {
+  display: grid;
+  gap: 0.4rem;
+  color: var(--text-heading, #08060d);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.study-setup select,
+.study-session textarea {
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--border, #e5e4e7);
+  border-radius: 0.5rem;
+  color: var(--text-heading, #08060d);
+  background-color: var(--background, #ffffff);
+  font: inherit;
+}
+
+.study-setup select:focus,
+.study-session textarea:focus {
+  border-color: var(--accent, #28734a);
+  outline: 3px solid rgb(40 115 74 / 15%);
+}
+
+.study-setup fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.study-setup legend {
+  margin-bottom: 0.7rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.study-setup fieldset label {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--text, #6b6375);
+  font-size: 0.9rem;
+}
+
+.study-setup input[type="radio"] {
+  accent-color: var(--accent, #28734a);
+}
+
+/* Study workspace */
+
+.study-workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(15rem, 1fr);
+  gap: 1rem;
+}
+
+.study-session,
+.study-progress {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--border, #e5e4e7);
+  border-top: 4px solid var(--accent, #28734a);
+  border-radius: 0.75rem;
+  background-color: var(--background, #ffffff);
+}
+
+.study-session {
+  display: grid;
+  gap: 1rem;
+}
+
+.study-session header,
+.study-progress h2 {
+  margin: 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border, #e5e4e7);
+}
+
+.study-session header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.study-session h2,
+.study-progress h2 {
+  font-size: 1.1rem;
+}
+
+.study-session header span {
+  color: var(--text, #6b6375);
+  font-size: 0.8rem;
+}
+
+.study-timer {
+  padding: 1.25rem;
+  border: 2px dashed var(--border, #e5e4e7);
+  border-radius: 0.6rem;
+  font-size: clamp(3rem, 10vw, 6rem);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  text-align: center;
+}
+
+.study-session__actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.study-session__actions button {
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--border, #e5e4e7);
+  border-radius: 0.5rem;
+  color: var(--text-heading, #08060d);
+  background-color: var(--background, #ffffff);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.study-session__actions button:first-child {
+  border-color: var(--accent, #28734a);
+  color: white;
+  background-color: var(--accent, #28734a);
+}
+
+.study-session__actions button:hover {
+  filter: brightness(0.92);
+}
+
+.study-session textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+/* Progress card */
+
+.study-progress dl {
+  display: grid;
+  gap: 0.7rem;
+  margin: 1rem 0 0;
+}
+
+.study-progress dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem;
+  border: 1px solid var(--border, #e5e4e7);
+  border-radius: 0.6rem;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 5%);
+}
+
+.study-progress dt {
+  color: var(--text, #6b6375);
+  font-size: 0.9rem;
+}
+
+.study-progress dd {
+  margin: 0;
+  font-weight: 700;
+}
+
+/* Tablet and mobile */
+
+@media (max-width: 700px) {
+  .study-page {
+    width: min(100% - 1.25rem, 1120px);
+    padding: 1.5rem 0;
+  }
+
+  .study-setup,
+  .study-workspace {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 450px) {
+  .study-setup fieldset,
+  .study-session__actions {
+    flex-direction: column;
+  }
+
+  .study-session__actions button {
+    width: 100%;
+  }
+}
